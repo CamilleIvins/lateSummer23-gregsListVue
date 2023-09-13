@@ -5,10 +5,14 @@
         Gregslist
       </h1>
       <!-- NOTE router-link should be used whenever clicking something should take you to a new place -->
-      <router-link :to="{name: 'Cars'}">
+      <router-link :to="{ name: 'Cars' }">
         Cars 🚗
       </router-link>
-      <button class="btn btn-primary" @click="goToCarsPage">Cars link via Code</button>
+      <router-link :to="{ name: 'Houses' }">
+        Houses 🏡
+      </router-link>
+      <!-- this is the less preferred route, only router.push when creating new item to post -->
+      <!-- <button class="btn btn-primary" @click="goToCarsPage">Cars link via Code</button> -->
     </div>
   </div>
 </template>
@@ -21,10 +25,10 @@ export default {
   setup() {
     const router = useRouter()
     return {
-      goToCarsPage(){
+      goToCarsPage() {
         logger.log('Going to the cars page now')
         // NOTE router.push should be used only for automatically navigating the user when certain code process are done
-        router.push({name: 'Cars'})
+        router.push({ name: 'Cars' })
       }
     }
   }
