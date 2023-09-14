@@ -1,10 +1,11 @@
 <template>
     <div class="container">
 
+        <HouseForm />
 
         <section class="row mt-2 g-3">
-            <div class="col-12 col-md-6">
-
+            <div v-for="house in houses" :key="house.id" class="col-12 col-md-6">
+                <HouseCard :house="house" />
             </div>
         </section>
 

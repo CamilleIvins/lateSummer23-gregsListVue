@@ -7,7 +7,7 @@ export class House {
         this.imgUrl = data.imgUrl
         this.year = data.year
         this.price = data.price
-        this.creatorId = data.creatorId
+        this.creatorId = data.creator
         this.createdAt = new Date(data.createdAt)
         this.updatedAt = new Date(data.updatedAt)
         this.description = data.description
